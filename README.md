@@ -26,12 +26,10 @@ Response
 {
   "status": "success",
   "data": {
-    "title": "This title",
+    "id": 1,
+    "title": "This Title",
     "content": "This Content",
-    "website_id": 2,
-    "updated_at": "2024-04-27T15:20:25.000000Z",
-    "created_at": "2024-04-27T15:20:25.000000Z",
-    "id": 9
+    "website_id": 1
   }
 }
 ```
@@ -56,11 +54,9 @@ Response
 {
   "status": "success",
   "data": {
+    "id": 1,
     "email": "name@example.com",
-    "post_id": 5,
-    "updated_at": "2024-04-27T15:20:53.000000Z",
-    "created_at": "2024-04-27T15:20:53.000000Z",
-    "id": 5
+    "post_id": 5
   }
 }
 ```
