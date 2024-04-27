@@ -12,19 +12,36 @@ class PostController extends Controller
     public function store(PostRequest $request)
     {
         try {
-            $data = Post::create($request->validated());
+            $data = Post::firstOrCreate($request->validated());
+            $data = $this->transformData($data);
 
-            return response()->json([
-                'status' => 'success',
-                'data'   => $data,
-            ], 200);
+            return $this->responseJSON('success', $data, 200);
         } catch (Exception $ex) {
             Log::error($ex->getMessage());
 
-            return response()->json([
-                'status'  => 'error',
-                'message' => 'The server has encountered an unexpected condition'
-            ], 500);
+            return $this->responseJSON('error', 'The server has encountered an unexpected condition', 500);
         }
+    }
+
+    private function transformData($data)
+    {
+        if (!is_object($data)) {
+            return $data;
+        }
+
+        return [
+            'id' => $data->id,
+            'title' => $data->title,
+            'content' => $data->content,
+            'website_id' => $data->website_id
+        ];
+    }
+
+    private function responseJSON($status, $data, $statusCode)
+    {
+        return response()->json([
+            'status' => $status,
+            'data'   => $data,
+        ], $statusCode);
     }
 }
