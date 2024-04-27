@@ -130,6 +130,16 @@ And for queue, can use database. For using, change env queue connection to
 QUEUE_CONNECTION=database
 ```
 
+Running queue
+```bash
+php artisan queue:work
+```
+
+Running send post email
+```bash
+php artisan app:send-post-emails
+```
+
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
