@@ -4,7 +4,7 @@
 </h1>
 <p align="center">Larasubs is a simple subscription platform</p>
 
-### Features
+### ✨ Features
 
 > Create Post
 
@@ -65,26 +65,26 @@ Response
 ### ⚙️ PHP 8.1
 - Larasubs requires a PHP version of at least 8.1.
 
-### Installation
+### ⚡️ Installation
 1. Clone GitHub repo for this project locally
 ```bash
-$ git clone https://github.com/dibaliqaja/larasubs.git
+git clone https://github.com/dibaliqaja/larasubs.git
 ```
 2. Change directory in project which already clone
 ```bash
-$ cd larasubs
+cd larasubs
 ```
 3. Install Composer dependencies
 ```bash
-$ composer install
+composer install
 ```
 4. Create a copy of your .env file
 ```bash
-$ cp .env.example .env
+cp .env.example .env
 ```
 5. Generate an app encryption key
 ```bash
-$ php artisan key:generate
+php artisan key:generate
 ```
 6. Create an empty database for our application
 
@@ -99,18 +99,18 @@ DB_PASSWORD={password-database}
 ```
 9. Migrate the database
 ```bash
-$ php artisan migrate
+php artisan migrate
 ```
 10. Seed the database
 ```bash
-$ php artisan db:seed
+php artisan db:seed
 ```
 11. Running project
 ```bash
-$ php artisan serve
+php artisan serve
 ```
 
-Note:
+📝 Note:
 
 If testing for email, can use mailtrap. For using, change env mail to
 ```bash
@@ -136,6 +136,6 @@ Running send post email
 php artisan app:send-post-emails
 ```
 
-## License
+## 📋 License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
